@@ -13,18 +13,20 @@
 
 <!-- NAVBAR -->
 <nav id="navbar">
-  <button class="nav-btn active" onclick="showSection('home',this)">Home</button>
-  <button class="nav-btn" onclick="showSection('about',this)">About Me</button>
-  <button class="nav-btn" onclick="showSection('skills',this)">Skills</button>
-  <button class="nav-btn" onclick="showSection('portfolio',this)">Portfolio</button>
-  <button class="nav-btn" onclick="showSection('cv',this)">CV</button>
+  <div class="navbar-wrapper">
+    <button class="nav-btn active" onclick="showSection('home',this)">Home</button>
+    <button class="nav-btn" onclick="showSection('about',this)">About</button>
+    <button class="nav-btn" onclick="showSection('skills',this)">Skills</button>
+    <button class="nav-btn" onclick="showSection('portfolio',this)">Portofolio</button>
+    <button class="nav-btn" onclick="showSection('cv',this)">CV</button>
+  </div>
 </nav>
 
 <!-- ===== HOME ===== -->
-<section id="home" class="section active">
+<section id="home" class="section active in-view">
   <div class="home-inner">
     <div class="home-profile-wrap">
-      <img class="home-profile-img" src="indrii2.jpeg" alt="Indri Rochmandari"/>
+      <img class="home-profile-img" src="img/indrii2.jpeg" alt="Indri Rochmandari"/>
     </div>
     <div class="home-text">
       <p class="home-label">Website Statis Personal Branding</p>
@@ -44,63 +46,105 @@
 
 <!-- ===== ABOUT ===== -->
 <section id="about" class="section">
-  <div class="about-banner" onclick="openLightbox('riveroflife.png')" style="cursor:zoom-in">
-    <img src="riveroflife.png" alt="River of Life"/>
+  <div class="about-banner" onclick="openLightbox('img/riveroflife.png')" style="cursor:zoom-in">
+    <img src="img/riveroflife.png" alt="River of Life"/>
     <div class="about-banner-overlay">
       <h2>About <span>Me</span></h2>
     </div>
   </div>
 
-  <div class="about-grid">
-    <div class="about-card full">
-      <div class="about-card-icon">🌱</div>
-      <h3>My Story</h3>
-      <p>Aku berasal dari <span class="about-highlight">keluarga sederhana</span> yang selalu mendukung aku untuk terus belajar dan berkembang. Dukungan mereka jadi fondasi terkuat yang bikin aku berani mencoba hal-hal baru, termasuk menyelami dunia <span class="about-highlight">jaringan komputer</span> dan desain.</p>
-    </div>
+  <div class="about-new-grid">
 
+    <!-- Baris 1 -->
     <div class="about-card">
-      <div class="about-card-icon">🎓</div>
-      <h3>Pendidikan</h3>
-      <ul>
-        <li>SD Negeri Kembangarum 01</li>
-        <li>SMP Negeri 1 Semarang</li>
-        <li>SMK Negeri 7 Semarang<br/><small style="color:var(--text-dim)">Jurusan SIJA</small></li>
-      </ul>
-    </div>
-
-    <div class="about-card">
-      <div class="about-card-icon">🎵</div>
+      <div class="about-card-icon">�</div>
       <h3>Hobi</h3>
-      <ul>
-        <li>Menyanyi</li>
-        <li>Mendengarkan musik</li>
-        <li>Menonton film / drama</li>
-        <li>Mencoba hal baru</li>
-      </ul>
+      <div class="about-pills">
+        <span>Menyanyi</span>
+        <span>Mendengarkan Musik</span>
+        <span>Menonton Film</span>
+        <span>Nonton Drama</span>
+        <span>Mencoba Hal Baru</span>
+      </div>
     </div>
 
     <div class="about-card">
       <div class="about-card-icon">🔍</div>
       <h3>Minat</h3>
-      <p>Aku tertarik pada dunia <span class="about-highlight">networking</span> — bukan sekadar menghubungkan perangkat, tapi benar-benar memahami cara kerjanya. Di sisi lain, aku juga suka eksplorasi <span class="about-highlight">desain sederhana</span> yang estetik.</p>
+      <div class="about-pills">
+        <span>Networking</span>
+        <span>Desain Grafis</span>
+        <span>Content Creation</span>
+        <span>Web Development</span>
+        <span>IoT</span>
+      </div>
     </div>
 
     <div class="about-card">
-      <div class="about-card-icon">🌟</div>
+      <div class="about-card-icon">�</div>
       <h3>Cita-cita</h3>
-      <p>Menjadi <span class="about-highlight">desainer profesional</span> atau berkarier di bidang <span class="about-highlight">jaringan komputer</span> — dua passion yang terus aku kembangkan setiap harinya.</p>
+      <div class="about-pills">
+        <span>Network Engineer</span>
+        <span>Desainer Profesional</span>
+        <span>Content Creator</span>
+      </div>
+    </div>
+
+    <!-- Baris 2 -->
+    <div class="about-card">
+      <div class="about-card-icon">�</div>
+      <h3>Kelebihan</h3>
+      <div class="about-pills">
+        <span>Detail-oriented</span>
+        <span>Creative</span>
+        <span>Fast Learner</span>
+        <span>Teamwork</span>
+        <span>Adaptive</span>
+        <span>Responsible</span>
+      </div>
     </div>
 
     <div class="about-card">
-      <div class="about-card-icon">💡</div>
-      <h3>Kelebihan</h3>
-      <ul>
-        <li>Teliti & detail-oriented</li>
-        <li>Memahami dasar jaringan</li>
-        <li>Desain dengan Canva</li>
-        <li>Editing video (CapCut)</li>
-      </ul>
+      <div class="about-card-icon">�</div>
+      <h3>Pendidikan</h3>
+      <div class="about-edu-list">
+        <div class="about-edu-item">
+          <div class="about-edu-dot"></div>
+          <div>
+            <strong>SMK Negeri 7 Semarang</strong>
+            <small>SIJA · 2024 – sekarang</small>
+          </div>
+        </div>
+        <div class="about-edu-item">
+          <div class="about-edu-dot"></div>
+          <div>
+            <strong>SMP Negeri 1 Semarang</strong>
+            <small>2021 – 2024</small>
+          </div>
+        </div>
+        <div class="about-edu-item">
+          <div class="about-edu-dot"></div>
+          <div>
+            <strong>SD Negeri Kembangarum 01</strong>
+            <small>2015 – 2021</small>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="about-card">
+      <div class="about-card-icon">🌸</div>
+      <h3>Kepribadian</h3>
+      <div class="about-pills">
+        <span>Good Listener</span>
+        <span>Discipline</span>
+        <span>Perfeksionis</span>
+        <span>Curious Person</span>
+        <span>Initiative</span>
+        <span>Cooperative</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -129,9 +173,16 @@
         </div>
         <div class="skill-track"><div class="skill-bar"></div></div>
       </div>
-      <div class="skill-item" data-pct="50">
+      <div class="skill-item" data-pct="65">
         <div class="skill-header">
           <span class="skill-name">HTML &amp; CSS</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="72">
+        <div class="skill-header">
+          <span class="skill-name">Troubleshooting</span>
           <span class="skill-pct">0%</span>
         </div>
         <div class="skill-track"><div class="skill-bar"></div></div>
@@ -139,7 +190,7 @@
     </div>
 
     <div class="skills-group">
-      <h3>🎨 Creative &amp; Tools</h3>
+      <h3>🎨 Creative Skills</h3>
       <div class="skill-item" data-pct="80">
         <div class="skill-header">
           <span class="skill-name">Canva Design</span>
@@ -147,16 +198,87 @@
         </div>
         <div class="skill-track"><div class="skill-bar"></div></div>
       </div>
-      <div class="skill-item" data-pct="70">
+      <div class="skill-item" data-pct="75">
         <div class="skill-header">
-          <span class="skill-name">CapCut</span>
+          <span class="skill-name">Figma</span>
           <span class="skill-pct">0%</span>
         </div>
         <div class="skill-track"><div class="skill-bar"></div></div>
       </div>
-      <div class="skill-item" data-pct="75">
+      <div class="skill-item" data-pct="78">
         <div class="skill-header">
-          <span class="skill-name">Microsoft Office</span>
+          <span class="skill-name">Video Editing</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="76">
+        <div class="skill-header">
+          <span class="skill-name">Presentation Design</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <h3>🌟 Personal Skills</h3>
+      <div class="skill-item" data-pct="85">
+        <div class="skill-header">
+          <span class="skill-name">Communication</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="88">
+        <div class="skill-header">
+          <span class="skill-name">Teamwork</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="82">
+        <div class="skill-header">
+          <span class="skill-name">Creative Thinking</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="80">
+        <div class="skill-header">
+          <span class="skill-name">Time Management</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <h3>✨ Other Skills</h3>
+      <div class="skill-item" data-pct="83">
+        <div class="skill-header">
+          <span class="skill-name">Cooking</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="85">
+        <div class="skill-header">
+          <span class="skill-name">Singing</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="90">
+        <div class="skill-header">
+          <span class="skill-name">Fast Learner</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="87">
+        <div class="skill-header">
+          <span class="skill-name">Team Collaboration</span>
           <span class="skill-pct">0%</span>
         </div>
         <div class="skill-track"><div class="skill-bar"></div></div>
@@ -165,11 +287,11 @@
   </div>
 </section>
 
-<!-- ===== PORTFOLIO ===== -->
+<!-- ===== PORTOFOLIO ===== -->
 <section id="portfolio" class="section">
   <div class="section-title">
     <p>My Works</p>
-    <h2>Port<span>folio</span></h2>
+    <h2>Portofo<span>lio</span></h2>
     <div class="title-line"></div>
   </div>
 
@@ -177,7 +299,7 @@
     <!-- Item 1 -->
     <div class="portfolio-item" onclick="openModal('modal1')">
       <div class="portfolio-thumb">
-        <img src="P1.png" alt="Poster 1"/>
+        <img src="img/P1.png" alt="Poster 1"/>
         <div class="portfolio-overlay"><span>View Work</span></div>
       </div>
       <div class="portfolio-info">
@@ -189,7 +311,7 @@
     <!-- Item 2 -->
     <div class="portfolio-item" onclick="openModal('modal2')">
       <div class="portfolio-thumb">
-        <img src="P2.png" alt="Poster 2"/>
+        <img src="img/P2.png" alt="Poster 2"/>
         <div class="portfolio-overlay"><span>View Work</span></div>
       </div>
       <div class="portfolio-info">
@@ -201,7 +323,7 @@
     <!-- Item 3 -->
     <div class="portfolio-item" onclick="openModal('modal3')">
       <div class="portfolio-thumb">
-        <img src="feedpadus.png" alt="Feed Paduan Suara"/>
+        <img src="img/feedpadus.png" alt="Feed Paduan Suara"/>
         <div class="portfolio-overlay"><span>View Work</span></div>
       </div>
       <div class="portfolio-info">
@@ -235,52 +357,144 @@
     <div class="title-line"></div>
   </div>
 
-  <div class="cv-wrap">
-    <div class="cv-grid">
-      <div class="cv-card full">
-        <div class="cv-card-label">Data Pribadi</div>
-        <h3>Indri Rochmandari</h3>
-        <p>Jl. Rorojonggrang XXIII</p>
-        <p style="margin-top:6px;color:var(--yellow-light)">indrirochmandari11@gmail.com</p>
-      </div>
+  <div class="cv-new-wrap">
 
-      <div class="cv-card">
-        <div class="cv-card-label">Pendidikan</div>
-        <h3>Riwayat Sekolah</h3>
-        <ul>
-          <li>SD Negeri Kembangarum 01</li>
-          <li>SMP Negeri 1 Semarang</li>
-          <li>SMK Negeri 7 Semarang<br/><small style="color:var(--text-dim)">SIJA · 2024 – sekarang</small></li>
+    <!-- KOLOM KIRI -->
+    <div class="cv-left">
+      <div class="cv-photo-wrap">
+        <img src="img/indrikkcvv.png" alt="Foto CV Indri" class="cv-photo"/>
+      </div>
+      <div class="cv-side-section">
+        <div class="cv-side-title">Data Pribadi</div>
+        <ul class="cv-info-list">
+          <li><span class="cv-info-icon">👤</span><span>Indri Rochmandari</span></li>
+          <li><span class="cv-info-icon">📍</span><span>Semarang, 8 Desember 2008</span></li>
+          <li><span class="cv-info-icon">⚧</span><span>Perempuan</span></li>
+          <li><span class="cv-info-icon">🕌</span><span>Islam</span></li>
+          <li><span class="cv-info-icon">🏠</span><span>Jl. RoroJonggrang XXIII RT 01 RW 10, Manyaran, Semarang Barat</span></li>
+          <li><span class="cv-info-icon">📧</span><span>indrirochmandari11@gmail.com</span></li>
+          <li><span class="cv-info-icon">📱</span><span>+62 888 0611 6605</span></li>
+          <li><span class="cv-info-icon">📸</span><span>@nrcdytihf</span></li>
         </ul>
       </div>
-
-      <div class="cv-card">
-        <div class="cv-card-label">Pengalaman</div>
-        <h3>Organisasi</h3>
-        <ul>
-          <li>Paduan Suara</li>
+      <div class="cv-side-section">
+        <div class="cv-side-title">Software</div>
+        <ul class="cv-tag-list">
+          <li>VS Code</li><li>Canva</li><li>Cisco Packet Tracer</li>
+          <li>MS Word</li><li>MS PowerPoint</li><li>MS Excel</li>
+          <li>CapCut</li><li>Figma</li><li>Google Sites</li>
         </ul>
       </div>
-
-      <div class="cv-card full">
-        <div class="cv-card-label">Kemampuan</div>
-        <h3>Skills</h3>
-        <ul style="columns:2;gap:20px">
-          <li>Networking Dasar</li>
-          <li>Desain Canva / PPT / Poster</li>
-          <li>Troubleshooting Jaringan</li>
-          <li>Editing Video (CapCut)</li>
-          <li>HTML &amp; CSS Dasar</li>
-          <li>Microsoft Office</li>
+      <div class="cv-side-section">
+        <div class="cv-side-title">Soft Skills</div>
+        <ul class="cv-tag-list">
+          <li>Komunikasi</li><li>Kerja Sama Tim</li><li>Disiplin</li>
+          <li>Bertanggung Jawab</li><li>Adaptasi</li><li>Teliti</li>
         </ul>
       </div>
     </div>
 
-    <div class="cv-quote">
-      <p>"Belajar bukan tentang seberapa cepat kamu sampai, tapi seberapa dalam kamu memahami setiap langkahnya."</p>
-      <span>— Indri Rochmandari</span>
+    <!-- KOLOM KANAN -->
+    <div class="cv-right">
+      <div class="cv-right-section">
+        <div class="cv-right-title">🎓 Pendidikan</div>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>SMK Negeri 7 Semarang</strong>
+              <span>Sistem Informasi Jaringan dan Aplikasi (SIJA) · 2024 – sekarang</span>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>SMP Negeri 1 Semarang</strong>
+              <span>2021 – 2024</span>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>SD Negeri Kembangarum 01 Semarang</strong>
+              <span>2015 – 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-right-section">
+        <div class="cv-right-title">🏅 Pengalaman Organisasi</div>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Ekstrakurikuler Paduan Suara</strong>
+              <span>Berpartisipasi dalam latihan dan penampilan acara sekolah · Melatih kerja sama tim dan disiplin</span>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Karang Taruna</strong>
+              <span>Ikut serta dalam kegiatan sosial dan acara lingkungan · Membantu koordinasi kegiatan bersama anggota lain</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-right-section">
+        <div class="cv-right-title">💻 Project</div>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Project Website Kelompok</strong>
+              <span>Membantu pembuatan dan desain website · Menggunakan HTML dan CSS dalam pengembangan website</span>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Miniature Smart Home berbasis IoT</strong>
+              <span>Membuat miniatur smart home untuk kontrol lampu dan deteksi gas · Bekerja sama dalam tim untuk perancangan dan pengujian alat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-right-section">
+        <div class="cv-right-title">✨ Pengalaman Lain</div>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Admin Media Sosial</strong>
+              <span>Mengelola konten dan postingan media sosial · Membantu meningkatkan interaksi akun melalui desain dan caption</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-right-section">
+        <div class="cv-right-title">⚡ Hard Skills</div>
+        <ul class="cv-tag-list cv-tag-dark">
+          <li>Editing Foto &amp; Video</li><li>Microsoft Office</li>
+          <li>Kelola Media Sosial</li><li>Desain Konten Digital</li>
+          <li>Content Creation</li><li>Manajemen Konten</li>
+          <li>Dasar Pembuatan Website</li>
+        </ul>
+      </div>
+
+    </div><!-- end cv-right -->
+
+    <!-- QUOTE — full width di bawah kedua kolom -->
+    <div class="cv-quote" style="grid-column:1/-1;margin-top:8px;">
+      <p>"Dunia boleh saja menahanku, atau perlahan bongkar mimpiku, kupunya doa Ibu. "</p>
+      <span>— Perungggu, 2024</span>
     </div>
-  </div>
+
+  </div><!-- end cv-new-wrap -->
 </section>
 
 <!-- ===== MODALS ===== -->
@@ -288,7 +502,7 @@
   <div class="modal-card-wrap">
     <div class="modal-card">
       <button class="modal-close" onclick="closeModal('modal1')">✕</button>
-      <img class="modal-img" src="P1.png" alt="Poster 1"/>
+      <img class="modal-img" src="img/P1.png" alt="Poster 1"/>
       <div class="modal-body">
         <h3>Poster Design 01</h3>
         <p>Poster ini dibuat sebagai bentuk pengembangan kemampuan desain grafis dalam menyampaikan materi PPKN tentang demokrasi secara visual, menarik, dan mudah dipahami.</p>
@@ -301,7 +515,7 @@
   <div class="modal-card-wrap">
     <div class="modal-card">
       <button class="modal-close" onclick="closeModal('modal2')">✕</button>
-      <img class="modal-img" src="P2.png" alt="Poster 2"/>
+      <img class="modal-img" src="img/P2.png" alt="Poster 2"/>
       <div class="modal-body">
         <h3>Poster Design 02</h3>
         <p>Poster ini dibuat sebagai perwakilan tugas kelas untuk menyampaikan kebiasaan anak Indonesia hebat secara visual, dengan desain yang menarik dan mudah dipahami agar pesan yang disampaikan dapat diterima dengan baik oleh semua siswa.</p>
@@ -314,7 +528,7 @@
   <div class="modal-card-wrap">
     <div class="modal-card">
       <button class="modal-close" onclick="closeModal('modal3')">✕</button>
-      <img class="modal-img" src="feedpadus.png" alt="Feed Paduan Suara"/>
+      <img class="modal-img" src="img/feedpadus.png" alt="Feed Paduan Suara"/>
       <div class="modal-body">
         <h3>Feed Paduan Suara</h3>
         <p>Poster ini dibuat sebagai media informasi dan promosi kegiatan sertijab (serah terima jabatan) ekstrakurikuler paduan suara (padus) melalui Instagram, dengan desain yang menarik agar dapat menarik perhatian siswa.</p>
@@ -350,6 +564,32 @@
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
   <img class="lightbox-img" id="lightbox-img" src="" alt=""/>
 </div>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="footer-content">
+    <p>Connect with me on social media</p>
+    <div class="social-links">
+      <a href="https://instagram.com/nrcdytihf" target="_blank" class="social-link" title="Instagram">
+        <span>📸</span>
+        <span class="social-text">Instagram</span>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&to=indrirochmandari11@gmail.com" target="_blank" class="social-link" title="Email">
+        <span>📧</span>
+        <span class="social-text">Email</span>
+      </a>
+      <a href="https://wa.me/6288806116605" target="_blank" class="social-link" title="WhatsApp">
+        <span>💬</span>
+        <span class="social-text">WhatsApp</span>
+      </a>
+      <a href="https://github.com" target="_blank" class="social-link" title="GitHub">
+        <span>💻</span>
+        <span class="social-text">GitHub</span>
+      </a>
+    </div>
+    <p class="footer-credit">© 2026 Indri Rochmandari. All rights reserved.</p>
+  </div>
+</footer>
 
 <!-- ===== SCRIPTS ===== -->
 <script src="script.js"></script>

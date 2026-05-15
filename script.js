@@ -1,14 +1,155 @@
-// --- SECTION NAVIGATION ---
+// --- FLOATING ORNAMENTS ---
+function spawnOrbs() {
+  const starChars = ['✦', '✧', '⋆', '✺', '◈', '◇', '✴'];
+
+  // Bintang berkedip
+  for (let i = 0; i < 25; i++) {
+    const star = document.createElement('span');
+    star.className = 'star-particle';
+    star.textContent = starChars[Math.floor(Math.random() * starChars.length)];
+    star.style.left = Math.random() * 90 + 'vw';
+    star.style.top = Math.random() * 90 + 'vh';
+    star.style.fontSize = (0.5 + Math.random() * 1.2) + 'rem';
+    star.style.animationDuration = (2 + Math.random() * 4) + 's';
+    star.style.animationDelay = (Math.random() * 5) + 's';
+    document.body.appendChild(star);
+  }
+
+  // Bulatan kecil melayang
+  for (let i = 0; i < 6; i++) {
+    const orb = document.createElement('div');
+    orb.className = 'orb';
+    const size = 20 + Math.random() * 50;
+    orb.style.width = size + 'px';
+    orb.style.height = size + 'px';
+    orb.style.left = Math.random() * 85 + 'vw';
+    orb.style.top = (80 + Math.random() * 40) + 'vh';
+    orb.style.animationDuration = (10 + Math.random() * 14) + 's';
+    orb.style.animationDelay = (Math.random() * 8) + 's';
+    document.body.appendChild(orb);
+  }
+}
+spawnOrbs();
+
+// --- CUSTOM CURSOR ---
+const cursor = document.createElement('div');
+cursor.id = 'custom-cursor';
+document.body.appendChild(cursor);
+
+const trail = document.createElement('div');
+trail.id = 'cursor-trail';
+document.body.appendChild(trail);
+
+let mouseX = 0, mouseY = 0;
+let trailX = 0, trailY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursor.style.left = mouseX + 'px';
+  cursor.style.top = mouseY + 'px';
+});
+
+// Trail ngikutin dengan delay
+function animateTrail() {
+  trailX += (mouseX - trailX) * 0.15;
+  trailY += (mouseY - trailY) * 0.15;
+  trail.style.left = trailX + 'px';
+  trail.style.top = trailY + 'px';
+  requestAnimationFrame(animateTrail);
+}
+animateTrail();
+
+// Efek klik — cursor membesar sebentar
+document.addEventListener('mousedown', () => {
+  cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+  cursor.style.background = 'var(--yellow-light)';
+});
+document.addEventListener('mouseup', () => {
+  cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+  cursor.style.background = 'var(--yellow)';
+});
+
+// Hover di elemen clickable — trail membesar
+document.querySelectorAll('button, a, .portfolio-item, .about-card, .cv-side-section, .cv-right-section, .nav-btn, .navbar-wrapper, .social-link').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    trail.style.width = '48px';
+    trail.style.height = '48px';
+    trail.style.borderColor = 'var(--yellow-light)';
+    trail.style.opacity = '0.8';
+  });
+  el.addEventListener('mouseleave', () => {
+    trail.style.width = '28px';
+    trail.style.height = '28px';
+    trail.style.borderColor = 'var(--yellow)';
+    trail.style.opacity = '0.5';
+  });
+});
+
+
 function showSection(id, btn) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  const target = document.getElementById(id);
-  target.classList.add('active');
-  target.scrollTop = 0; // scroll ke atas di dalam section
+  if (!btn) {
+    btn = document.querySelector(`.nav-btn[onclick="showSection('${id}',this)"]`);
+  }
   if (btn) btn.classList.add('active');
+  const target = document.getElementById(id);
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   if (id === 'skills') initSkills();
   revealSection(id);
 }
+
+function updateActiveNavOnScroll() {
+  const sections = Array.from(document.querySelectorAll('.section'));
+  const scrollPosition = window.scrollY + window.innerHeight * 0.35;
+  let currentId = sections[0].id;
+
+  sections.forEach(section => {
+    if (section.offsetTop <= scrollPosition) {
+      currentId = section.id;
+    }
+  });
+
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    const targetId = btn.getAttribute('onclick')?.match(/showSection\('(.+?)',this\)/)?.[1];
+    btn.classList.toggle('active', targetId === currentId);
+  });
+}
+
+function observeSections() {
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        const sectionId = entry.target.id;
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+          const targetId = btn.getAttribute('onclick')?.match(/showSection\('(.+?)',this\)/)?.[1];
+          btn.classList.toggle('active', targetId === sectionId);
+        });
+        if (sectionId === 'skills' && !skillsInited) {
+          initSkills();
+        }
+      }
+    });
+  }, {
+    rootMargin: '0px 0px -30% 0px',
+    threshold: 0.1
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+window.addEventListener('scroll', () => {
+  updateActiveNavOnScroll();
+});
+
+window.addEventListener('resize', () => {
+  updateActiveNavOnScroll();
+});
+
+observeSections();
+updateActiveNavOnScroll();
 
 // --- TYPING ANIMATION ---
 const typingEl = document.getElementById('typing-text');
