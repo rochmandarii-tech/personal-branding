@@ -800,6 +800,37 @@ a{color:var(--yellow);text-decoration:none}
   font-weight:600;
 }
 
+/* CV Action Buttons */
+.cv-action-btns{
+  display:flex;flex-direction:column;gap:10px;
+}
+.cv-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 16px;border-radius:30px;
+  font-family:'Raleway',sans-serif;font-size:0.82rem;
+  font-weight:700;letter-spacing:0.08em;
+  text-decoration:none;transition:var(--transition);
+  cursor:pointer;
+}
+.cv-btn-primary{
+  background:var(--yellow);color:var(--dark);
+  border:1.5px solid var(--yellow);
+}
+.cv-btn-primary:hover{
+  background:var(--yellow-light);
+  box-shadow:0 0 18px var(--yellow-glow);
+  transform:translateY(-2px);
+}
+.cv-btn-outline{
+  background:transparent;color:var(--yellow);
+  border:1.5px solid var(--yellow);
+}
+.cv-btn-outline:hover{
+  background:var(--yellow-soft);
+  box-shadow:0 0 18px var(--yellow-glow);
+  transform:translateY(-2px);
+}
+
 /* ===== FOOTER ===== */
 #footer{
   background:rgba(14,11,7,0.95);
