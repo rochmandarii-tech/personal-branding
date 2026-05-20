@@ -1,1071 +1,609 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Referendum Timor Timur 1999 | Sejarah Indonesia</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Indri Rochmandari — Personal Branding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<canvas id="sparkleCanvas"></canvas>
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Timor Timur '99</div>
-  <div class="nav-links">
-    <a href="#pengertian">Pengertian</a>
-    <a href="#infografis">Infografis</a>
-    <a href="#timeline">Timeline</a>
-    <a href="#tokoh">Tokoh</a>
-    <a href="#dampak">Dampak</a>
-    <a href="#kuis">Kuis</a>
-    <a href="#tim">Tim</a>
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="navbar-wrapper">
+    <button class="nav-btn active" onclick="showSection('home',this)">Home</button>
+    <button class="nav-btn" onclick="showSection('about',this)">About</button>
+    <button class="nav-btn" onclick="showSection('skills',this)">Skills</button>
+    <button class="nav-btn" onclick="showSection('portfolio',this)">Portofolio</button>
+    <button class="nav-btn" onclick="showSection('cv',this)">CV</button>
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-badge">Era Reformasi • Sejarah Indonesia</div>
-  <h1>Referendum<br><span>Timor Timur</span><br>1999</h1>
-  <p class="hero-sub">Ketika sebuah provinsi memilih jalannya sendiri — peristiwa paling bersejarah di era Reformasi yang mengubah peta Indonesia selamanya.</p>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <span class="hero-stat-num">78,5%</span>
-      <div class="hero-stat-label">Memilih Merdeka</div>
+<!-- ===== HOME ===== -->
+<section id="home" class="section active in-view">
+  <div class="home-inner">
+    <div class="home-profile-wrap">
+      <img class="home-profile-img" src="indrii2.jpeg" alt="Indri Rochmandari"/>
     </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">98,9%</span>
-      <div class="hero-stat-label">Partisipasi Pemilih</div>
+    <div class="home-text">
+      <p class="home-label">Website Statis Personal Branding</p>
+      <h1 class="home-name"><span>Indri</span> Rochmandari</h1>
+      <p class="home-tagline">Future Network Engineer | Learning networking to understand it, not just connect</p>
+      <div class="home-divider"></div>
+      <div class="home-typing-wrap">
+        <span id="typing-text"></span><span class="cursor"></span>
+      </div>
+      <div class="home-quote">
+        <p>"It's not always easy, but that's life. Be strong, because there are better days ahead."</p>
+        <span>— Mark Lee</span>
+      </div>
     </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">451K+</span>
-      <div class="hero-stat-label">Pemilih Terdaftar</div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section">
+  <div class="about-banner" onclick="openLightbox('River of Life Indri Rochamandari XI SIJA 1.png')" style="cursor:zoom-in">
+    <img src="River of Life Indri Rochamandari XI SIJA 1.png" alt="River of Life"/>
+    <div class="about-banner-overlay">
+      <h2>About <span>Me</span></h2>
     </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">30 Agt</span>
-      <div class="hero-stat-label">Hari Referendum 1999</div>
+  </div>
+
+  <div class="about-new-grid">
+
+    <!-- Baris 1 -->
+    <div class="about-card">
+      <div class="about-card-icon">�</div>
+      <h3>Hobi</h3>
+      <div class="about-pills">
+        <span>Menyanyi</span>
+        <span>Mendengarkan Musik</span>
+        <span>Menonton Film</span>
+        <span>Nonton Drama</span>
+        <span>Mencoba Hal Baru</span>
+      </div>
     </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">27 Thn</span>
-      <div class="hero-stat-label">Perjuangan 1975–2002</div>
+
+    <div class="about-card">
+      <div class="about-card-icon">🔍</div>
+      <h3>Minat</h3>
+      <div class="about-pills">
+        <span>Networking</span>
+        <span>Desain Grafis</span>
+        <span>Content Creation</span>
+        <span>Web Development</span>
+        <span>IoT</span>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card-icon">�</div>
+      <h3>Cita-cita</h3>
+      <div class="about-pills">
+        <span>Network Engineer</span>
+        <span>Desainer Profesional</span>
+        <span>Content Creator</span>
+      </div>
+    </div>
+
+    <!-- Baris 2 -->
+    <div class="about-card">
+      <div class="about-card-icon">�</div>
+      <h3>Kelebihan</h3>
+      <div class="about-pills">
+        <span>Detail-oriented</span>
+        <span>Creative</span>
+        <span>Fast Learner</span>
+        <span>Teamwork</span>
+        <span>Adaptive</span>
+        <span>Responsible</span>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card-icon">�</div>
+      <h3>Pendidikan</h3>
+      <div class="about-edu-list">
+        <div class="about-edu-item">
+          <div class="about-edu-dot"></div>
+          <div>
+            <strong>SMK Negeri 7 Semarang</strong>
+            <small>SIJA · 2024 – sekarang</small>
+          </div>
+        </div>
+        <div class="about-edu-item">
+          <div class="about-edu-dot"></div>
+          <div>
+            <strong>SMP Negeri 1 Semarang</strong>
+            <small>2021 – 2024</small>
+          </div>
+        </div>
+        <div class="about-edu-item">
+          <div class="about-edu-dot"></div>
+          <div>
+            <strong>SD Negeri Kembangarum 01</strong>
+            <small>2015 – 2021</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <div class="about-card-icon">🌸</div>
+      <h3>Kepribadian</h3>
+      <div class="about-pills">
+        <span>Good Listener</span>
+        <span>Discipline</span>
+        <span>Perfeksionis</span>
+        <span>Curious Person</span>
+        <span>Initiative</span>
+        <span>Cooperative</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section">
+  <div class="section-title">
+    <p>What I Can Do</p>
+    <h2>My <span>Skills</span></h2>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="skills-wrap">
+    <div class="skills-group">
+      <h3>⚙ Technical Skills</h3>
+      <div class="skill-item" data-pct="75">
+        <div class="skill-header">
+          <span class="skill-name">Networking</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="70">
+        <div class="skill-header">
+          <span class="skill-name">Cisco Packet Tracer</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="65">
+        <div class="skill-header">
+          <span class="skill-name">HTML &amp; CSS</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="72">
+        <div class="skill-header">
+          <span class="skill-name">Troubleshooting</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <h3>🎨 Creative Skills</h3>
+      <div class="skill-item" data-pct="80">
+        <div class="skill-header">
+          <span class="skill-name">Canva Design</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="75">
+        <div class="skill-header">
+          <span class="skill-name">Figma</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="78">
+        <div class="skill-header">
+          <span class="skill-name">Video Editing</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="76">
+        <div class="skill-header">
+          <span class="skill-name">Presentation Design</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <h3>🌟 Personal Skills</h3>
+      <div class="skill-item" data-pct="85">
+        <div class="skill-header">
+          <span class="skill-name">Communication</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="88">
+        <div class="skill-header">
+          <span class="skill-name">Teamwork</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="82">
+        <div class="skill-header">
+          <span class="skill-name">Creative Thinking</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="80">
+        <div class="skill-header">
+          <span class="skill-name">Time Management</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+    </div>
+
+    <div class="skills-group">
+      <h3>✨ Other Skills</h3>
+      <div class="skill-item" data-pct="83">
+        <div class="skill-header">
+          <span class="skill-name">Cooking</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="85">
+        <div class="skill-header">
+          <span class="skill-name">Singing</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="90">
+        <div class="skill-header">
+          <span class="skill-name">Fast Learner</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+      <div class="skill-item" data-pct="87">
+        <div class="skill-header">
+          <span class="skill-name">Team Collaboration</span>
+          <span class="skill-pct">0%</span>
+        </div>
+        <div class="skill-track"><div class="skill-bar"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTOFOLIO ===== -->
+<section id="portfolio" class="section">
+  <div class="section-title">
+    <p>My Works</p>
+    <h2>Portofo<span>lio</span></h2>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="portfolio-grid">
+    <!-- Item 1 -->
+    <div class="portfolio-item" onclick="openModal('modal1')">
+      <div class="portfolio-thumb">
+        <img src="P1.png" alt="Poster 1"/>
+        <div class="portfolio-overlay"><span>View Work</span></div>
+      </div>
+      <div class="portfolio-info">
+        <h4>Poster Design 01</h4>
+        <p>Karya desain poster dengan estetika visual yang kuat dan komposisi warna yang harmonis.</p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="portfolio-item" onclick="openModal('modal2')">
+      <div class="portfolio-thumb">
+        <img src="P2.png" alt="Poster 2"/>
+        <div class="portfolio-overlay"><span>View Work</span></div>
+      </div>
+      <div class="portfolio-info">
+        <h4>Poster Design 02</h4>
+        <p>Desain poster informatif dengan layout bersih dan tipografi yang mudah dibaca.</p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="portfolio-item" onclick="openModal('modal3')">
+      <div class="portfolio-thumb">
+        <img src="feedpadus.png" alt="Feed Paduan Suara"/>
+        <div class="portfolio-overlay"><span>View Work</span></div>
+      </div>
+      <div class="portfolio-info">
+        <h4>Feed Paduan Suara</h4>
+        <p>Desain feed media sosial untuk kegiatan paduan suara dengan nuansa elegan dan kohesif.</p>
+      </div>
+    </div>
+
+    <!-- Item 4 — Website -->
+    <div class="portfolio-item" onclick="openModal('modal4')">
+      <div class="portfolio-thumb portfolio-thumb-web">
+        <div class="portfolio-web-inner">
+          <div style="font-size:2.8rem;margin-bottom:10px;">🌐</div>
+          <p style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--yellow);font-weight:700;">pakaiin.vercel.app</p>
+        </div>
+        <div class="portfolio-overlay"><span>View Work</span></div>
+      </div>
+      <div class="portfolio-info">
+        <h4>Website Pakai.in</h4>
+        <p>Project Website Statis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CV ===== -->
+<section id="cv" class="section">
+  <div class="section-title">
+    <p>My Resume</p>
+    <h2>Curri<span>culum Vitae</span></h2>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="cv-new-wrap">
+
+    <!-- KOLOM KIRI -->
+    <div class="cv-left">
+      <div class="cv-photo-wrap">
+        <img src="indrikkcvv.png" alt="Foto CV Indri" class="cv-photo"/>
+      </div>
+      <div class="cv-side-section">
+        <div class="cv-side-title">Data Pribadi</div>
+        <ul class="cv-info-list">
+          <li><span class="cv-info-icon">👤</span><span>Indri Rochmandari</span></li>
+          <li><span class="cv-info-icon">📍</span><span>Semarang, 8 Desember 2008</span></li>
+          <li><span class="cv-info-icon">⚧</span><span>Perempuan</span></li>
+          <li><span class="cv-info-icon">🕌</span><span>Islam</span></li>
+          <li><span class="cv-info-icon">🏠</span><span>Jl. RoroJonggrang XXIII RT 01 RW 10, Manyaran, Semarang Barat</span></li>
+          <li><span class="cv-info-icon">📧</span><span>indrirochmandari11@gmail.com</span></li>
+          <li><span class="cv-info-icon">📱</span><span>+62 888 0611 6605</span></li>
+          <li><span class="cv-info-icon">📸</span><span>@nrcdytihf</span></li>
+        </ul>
+      </div>
+      <div class="cv-side-section">
+        <div class="cv-side-title">Software</div>
+        <ul class="cv-tag-list">
+          <li>VS Code</li><li>Canva</li><li>Cisco Packet Tracer</li>
+          <li>MS Word</li><li>MS PowerPoint</li><li>MS Excel</li>
+          <li>CapCut</li><li>Figma</li><li>Google Sites</li>
+        </ul>
+      </div>
+      <div class="cv-side-section">
+        <div class="cv-side-title">Soft Skills</div>
+        <ul class="cv-tag-list">
+          <li>Komunikasi</li><li>Kerja Sama Tim</li><li>Disiplin</li>
+          <li>Bertanggung Jawab</li><li>Adaptasi</li><li>Teliti</li>
+        </ul>
+      </div>
+
+      <div class="cv-side-section cv-btn-section">
+        <div class="cv-side-title">My CV</div>
+        <div class="cv-action-btns">
+          <a href="https://drive.google.com/file/d/1g1wSsYRYHqLHuPM658Kjc7Qvej9aI3FR/view?usp=sharing" target="_blank" class="cv-btn cv-btn-primary">
+            <span>👁</span> Lihat CV
+          </a>
+          <a href="https://drive.google.com/uc?export=download&id=1g1wSsYRYHqLHuPM658Kjc7Qvej9aI3FR" target="_blank" class="cv-btn cv-btn-outline">
+            <span>⬇</span> Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- KOLOM KANAN -->
+    <div class="cv-right">
+      <div class="cv-right-section">
+        <div class="cv-right-title">🎓 Pendidikan</div>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>SMK Negeri 7 Semarang</strong>
+              <span>Sistem Informasi Jaringan dan Aplikasi (SIJA) · 2024 – sekarang</span>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>SMP Negeri 1 Semarang</strong>
+              <span>2021 – 2024</span>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>SD Negeri Kembangarum 01 Semarang</strong>
+              <span>2015 – 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-right-section">
+        <div class="cv-right-title">🏅 Pengalaman Organisasi</div>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Ekstrakurikuler Paduan Suara</strong>
+              <span>Berpartisipasi dalam latihan dan penampilan acara sekolah · Melatih kerja sama tim dan disiplin</span>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Karang Taruna</strong>
+              <span>Ikut serta dalam kegiatan sosial dan acara lingkungan · Membantu koordinasi kegiatan bersama anggota lain</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-right-section">
+        <div class="cv-right-title">💻 Project</div>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Project Website Kelompok</strong>
+              <span>Membantu pembuatan dan desain website · Menggunakan HTML dan CSS dalam pengembangan website</span>
+            </div>
+          </div>
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Miniature Smart Home berbasis IoT</strong>
+              <span>Membuat miniatur smart home untuk kontrol lampu dan deteksi gas · Bekerja sama dalam tim untuk perancangan dan pengujian alat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-right-section">
+        <div class="cv-right-title">✨ Pengalaman Lain</div>
+        <div class="cv-timeline">
+          <div class="cv-timeline-item">
+            <div class="cv-tl-dot"></div>
+            <div class="cv-tl-content">
+              <strong>Admin Media Sosial</strong>
+              <span>Mengelola konten dan postingan media sosial · Membantu meningkatkan interaksi akun melalui desain dan caption</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-right-section" style="flex:1;">
+        <div class="cv-right-title">⚡ Hard Skills</div>
+        <ul class="cv-tag-list cv-tag-dark">
+          <li>Editing Foto &amp; Video</li><li>Microsoft Office</li>
+          <li>Kelola Media Sosial</li><li>Desain Konten Digital</li>
+          <li>Content Creation</li><li>Manajemen Konten</li>
+          <li>Dasar Pembuatan Website</li>
+        </ul>
+      </div>
+
+    </div><!-- end cv-right -->
+
+    <!-- QUOTE — full width di bawah kedua kolom -->
+    <div class="cv-quote" style="grid-column:1/-1;margin-top:8px;">
+      <p>"Dunia boleh saja menahanku, atau perlahan bongkar mimpiku, kupunya doa Ibu. "</p>
+      <span>— Perungggu, 2024</span>
+    </div>
+
+  </div><!-- end cv-new-wrap -->
+</section>
+
+<!-- ===== MODALS ===== -->
+<div class="modal-bg" id="modal1" onclick="closeModalBg(event,'modal1')">
+  <div class="modal-card-wrap">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('modal1')">✕</button>
+      <img class="modal-img" src="P1.png" alt="Poster 1"/>
+      <div class="modal-body">
+        <h3>Poster Design 01</h3>
+        <p>Poster ini dibuat sebagai bentuk pengembangan kemampuan desain grafis dalam menyampaikan materi PPKN tentang demokrasi secara visual, menarik, dan mudah dipahami.</p>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- PENGERTIAN -->
-<section class="intro-section" id="pengertian">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">01 — Pengertian</div>
-      <h2 class="section-title">Apa itu Referendum Timor Timur?</h2>
-      <p class="section-desc">Pemungutan suara bersejarah yang diawasi PBB untuk menentukan nasib provinsi ke-27 Indonesia.</p>
-    </div>
-    <div class="intro-layout fade-in">
-      <!-- KIRI: intro card -->
-      <div class="intro-card">
-        <p>Referendum Timor Timur adalah <strong>pemungutan suara demokratis</strong> yang diselenggarakan pada <strong>30 Agustus 1999</strong> di bawah pengawasan PBB melalui UNAMET (<em>United Nations Mission in East Timor</em>). Referendum ini menentukan nasib politik Timor Timur — tetap bergabung dengan Indonesia dalam otonomi khusus, atau merdeka sebagai negara baru.</p>
-        <p style="margin-top:1rem;">Timor Timur sebelumnya adalah koloni Portugal selama lebih dari 400 tahun. Setelah Portugal mundur pada 1975, Indonesia menginvasi dan mengintegrasikan wilayah ini sebagai provinsi ke-27 — sebuah langkah yang <strong>tidak pernah diakui PBB</strong>. Selama 24 tahun pendudukan, konflik bersenjata dan pelanggaran HAM terus terjadi, menewaskan diperkirakan <strong>100.000–180.000 jiwa</strong> akibat perang, kelaparan, dan penyakit.</p>
-        <p style="margin-top:1rem;">Hasilnya mengejutkan dunia: <strong>78,5% rakyat Timor Timur memilih merdeka</strong>. Pada 20 Mei 2002, Timor Timur resmi menjadi <strong>Timor Leste</strong> — negara merdeka pertama di abad ke-21.</p>
-        <div class="korban-badge">
-          ⚠️ Selama pendudukan 1975–1999, diperkirakan <strong>&nbsp;100.000–180.000 jiwa&nbsp;</strong> meninggal akibat konflik, kelaparan, dan penyakit (Komisi CAVR, 2005)
-        </div>
-        <div class="intro-grid">
-          <div class="intro-fact">
-            <div class="intro-fact-label">Penyelenggara</div>
-            <div class="intro-fact-val">UNAMET / PBB</div>
-          </div>
-          <div class="intro-fact">
-            <div class="intro-fact-label">Presiden saat itu</div>
-            <div class="intro-fact-val">B.J. Habibie</div>
-          </div>
-          <div class="intro-fact">
-            <div class="intro-fact-label">Status Timor Timur</div>
-            <div class="intro-fact-val">Provinsi ke-27 RI</div>
-          </div>
-          <div class="intro-fact">
-            <div class="intro-fact-label">Kemerdekaan resmi</div>
-            <div class="intro-fact-val">20 Mei 2002</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- KANAN: 4 funfact cards -->
-      <div class="funfact-grid">
-        <div class="funfact-card">
-          <div class="funfact-icon">🗳️</div>
-          <div class="funfact-label">Tahukah kamu?</div>
-          <div class="funfact-text">Referendum ini adalah satu-satunya kali Indonesia mengizinkan wilayahnya memilih untuk memisahkan diri secara demokratis.</div>
-        </div>
-        <div class="funfact-card">
-          <div class="funfact-icon">⏱️</div>
-          <div class="funfact-label">Rekor Partisipasi</div>
-          <div class="funfact-text">Tingkat partisipasi <strong>98,9%</strong> adalah salah satu yang tertinggi dalam sejarah referendum internasional yang diawasi PBB.</div>
-        </div>
-        <div class="funfact-card">
-          <div class="funfact-icon">🌏</div>
-          <div class="funfact-label">Negara Pertama</div>
-          <div class="funfact-text">Timor Leste adalah negara merdeka <strong>pertama di abad ke-21</strong>, resmi berdiri pada 20 Mei 2002 pukul 00.00 waktu setempat.</div>
-        </div>
-        <div class="funfact-card">
-          <div class="funfact-icon">📺</div>
-          <div class="funfact-label">Sorotan Dunia</div>
-          <div class="funfact-text">Lebih dari <strong>1.000 jurnalis</strong> internasional hadir meliput hari referendum — salah satu peristiwa paling diliput di Asia 1999.</div>
-        </div>
-        <div class="funfact-card">
-          <div class="funfact-icon">🕊️</div>
-          <div class="funfact-label">Nobel Perdamaian</div>
-          <div class="funfact-text">Ramos-Horta & Uskup Belo meraih <strong>Nobel Perdamaian 1996</strong> — tiga tahun sebelum referendum terlaksana.</div>
-        </div>
-        <div class="funfact-card">
-          <div class="funfact-icon">🪖</div>
-          <div class="funfact-label">Pasukan Terbesar</div>
-          <div class="funfact-text">INTERFET mengerahkan <strong>11.000 tentara</strong> dari 22 negara — operasi militer multinasional terbesar di Asia Tenggara saat itu.</div>
-        </div>
-      </div>
-    </div>
-
+<div class="modal-bg" id="modal2" onclick="closeModalBg(event,'modal2')">
+  <div class="modal-card-wrap">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('modal2')">✕</button>
+      <img class="modal-img" src="P2.png" alt="Poster 2"/>
+      <div class="modal-body">
+        <h3>Poster Design 02</h3>
+        <p>Poster ini dibuat sebagai perwakilan tugas kelas untuk menyampaikan kebiasaan anak Indonesia hebat secara visual, dengan desain yang menarik dan mudah dipahami agar pesan yang disampaikan dapat diterima dengan baik oleh semua siswa.</p>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- INFOGRAFIS -->
-<section class="infografis-section" id="infografis">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">02 — Infografis</div>
-      <h2 class="section-title">Data & Statistik Referendum</h2>
-      <p class="section-desc">Visualisasi data hasil pemungutan suara dan fakta-fakta penting dari referendum 1999.</p>
-    </div>
-
-    <!-- Hasil Vote Visual -->
-    <div class="vote-result-card fade-in" id="voteCard">
-      <h3 style="font-size:0.85rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Hasil Referendum — 4 September 1999</h3>
-      <div class="vote-bar-wrap">
-        <div class="vote-bar-label">
-          <span style="color:var(--red);font-weight:700;">Kemerdekaan (Menolak Otonomi)</span>
-          <span style="color:var(--red);">78,5% — 344.580 suara</span>
-        </div>
-        <div class="vote-bar">
-          <div class="vote-bar-fill fill-merdeka" id="barMerdeka">344.580 suara</div>
-        </div>
-      </div>
-      <div class="vote-bar-wrap" style="margin-top:0.75rem;">
-        <div class="vote-bar-label">
-          <span style="color:var(--navy-mid);font-weight:700;">Otonomi dalam NKRI</span>
-          <span style="color:var(--navy-mid);">21,5% — 94.388 suara</span>
-        </div>
-        <div class="vote-bar">
-          <div class="vote-bar-fill fill-otonomi" id="barOtonomi">94.388 suara</div>
-        </div>
-      </div>
-      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:1rem;">Total pemilih: 446.953 dari 451.792 terdaftar (partisipasi 98,9%)</p>
-
-      <div style="height:1px;background:var(--border);margin:1.5rem 0;"></div>
-
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:0.35rem;">Apa yang Dipilih Rakyat Timor Timur?</h3>
-      <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.25rem;">Referendum menawarkan dua pilihan. Berikut penjelasan masing-masing opsi dan hasilnya.</p>
-      <div class="pilihan-grid">
-        <div class="pilihan-card pilihan-merdeka">
-          <div class="pilihan-header">
-            <span class="pilihan-pct">78,5%</span>
-            <span class="pilihan-badge badge-merdeka">MENANG</span>
-          </div>
-          <h3 class="pilihan-title">🗽 Kemerdekaan Penuh</h3>
-          <p class="pilihan-desc">Timor Timur <strong>memisahkan diri sepenuhnya</strong> dari Indonesia dan menjadi negara berdaulat yang mandiri — punya pemerintahan, konstitusi, dan kebijakan luar negeri sendiri.</p>
-          <ul class="pilihan-list">
-            <li>✓ Negara berdaulat penuh</li>
-            <li>✓ Pemerintahan & konstitusi sendiri</li>
-            <li>✓ Bergabung sebagai anggota PBB</li>
-            <li>✓ Kebijakan luar negeri mandiri</li>
-          </ul>
-          <div class="pilihan-result">344.580 suara memilih ini</div>
-        </div>
-        <div class="pilihan-card pilihan-otonomi">
-          <div class="pilihan-header">
-            <span class="pilihan-pct">21,5%</span>
-            <span class="pilihan-badge badge-otonomi">KALAH</span>
-          </div>
-          <h3 class="pilihan-title">🇮🇩 Otonomi Khusus</h3>
-          <p class="pilihan-desc">Timor Timur <strong>tetap menjadi bagian Indonesia</strong> namun mendapat kewenangan mengatur dirinya sendiri secara luas — mirip daerah istimewa, tapi masih di bawah kedaulatan NKRI.</p>
-          <ul class="pilihan-list">
-            <li>✗ Tetap provinsi Indonesia</li>
-            <li>✗ Otonomi luas tapi terbatas</li>
-            <li>✗ Kebijakan pusat tetap berlaku</li>
-            <li>✗ Tidak punya kedaulatan penuh</li>
-          </ul>
-          <div class="pilihan-result">94.388 suara memilih ini</div>
-        </div>
+<div class="modal-bg" id="modal3" onclick="closeModalBg(event,'modal3')">
+  <div class="modal-card-wrap">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('modal3')">✕</button>
+      <img class="modal-img" src="feedpadus.png" alt="Feed Paduan Suara"/>
+      <div class="modal-body">
+        <h3>Feed Paduan Suara</h3>
+        <p>Poster ini dibuat sebagai media informasi dan promosi kegiatan sertijab (serah terima jabatan) ekstrakurikuler paduan suara (padus) melalui Instagram, dengan desain yang menarik agar dapat menarik perhatian siswa.</p>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- Charts Grid -->
-    <div class="chart-grid fade-in">
-      <div class="chart-card">
-        <h3>Komposisi Hasil Suara</h3>
-        <div style="position:relative;height:220px;">
-          <canvas id="donutChart" role="img" aria-label="Pie chart: 78.5% merdeka, 21.5% otonomi">78.5% memilih merdeka, 21.5% memilih otonomi</canvas>
-        </div>
-        <div style="display:flex;gap:16px;margin-top:1rem;font-size:12px;color:var(--text-muted);">
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#C0392B;display:inline-block;"></span>Merdeka 78,5%</span>
-          <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#2C3E6B;display:inline-block;"></span>Otonomi 21,5%</span>
-        </div>
-        <div class="chart-note">
-          Hasil ini jauh melampaui ekspektasi — banyak pihak memperkirakan selisihnya lebih tipis. Kemenangan telak 78,5% menunjukkan bahwa mayoritas besar rakyat Timor Timur sudah bulat menginginkan kemerdekaan penuh, bukan sekadar otonomi di bawah Indonesia.
-        </div>
+<div class="modal-bg" id="modal4" onclick="closeModalBg(event,'modal4')">
+  <div class="modal-card-wrap">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('modal4')">✕</button>
+      <div class="modal-web-header">
+        <div style="font-size:2.4rem;margin-bottom:10px;">🌐</div>
+        <p style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--yellow);font-weight:700;letter-spacing:0.04em;">pakaiin.vercel.app</p>
       </div>
-      <div class="chart-card">
-        <h3>Data Teknis Referendum</h3>
-        <div style="position:relative;height:220px;">
-          <canvas id="barChart" role="img" aria-label="Bar chart data teknis referendum">Pemilih terdaftar 451792, memberikan suara 446953, pilih merdeka 344580, pilih otonomi 94388</canvas>
-        </div>
-        <div class="chart-note">
-          Dari <strong>451.792 pemilih terdaftar</strong>, sebanyak 446.953 orang (98,9%) benar-benar datang mencoblos — angka partisipasi yang luar biasa untuk wilayah konflik. Hanya sekitar 7.839 suara yang dinyatakan tidak sah. Tingginya partisipasi mencerminkan betapa pentingnya momen ini bagi rakyat Timor Timur.
-        </div>
-      </div>
-    </div>
-
-    <!-- Konteks Historis -->
-    <div class="chart-card fade-in">
-      <h3>Kronologi Penting — Garis Waktu Singkat</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-top:0.5rem;">
-        <div class="kronologi-item" style="background:var(--red-light);">
-          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--red);">1975</div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">Invasi militer Indonesia (Operasi Seroja)</div>
-        </div>
-        <div class="kronologi-item" style="background:#E8ECF5;">
-          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--navy);">1976</div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">Integrasi resmi (Provinsi ke-27)</div>
-        </div>
-        <div class="kronologi-item" style="background:#FEF3CD;">
-          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#7D6608;">1998</div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">Reformasi — Soeharto mundur, Habibie naik</div>
-        </div>
-        <div class="kronologi-item" style="background:var(--red-light);">
-          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--red);">1999</div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">Referendum 30 Agustus</div>
-        </div>
-        <div class="kronologi-item" style="background:var(--green-light);">
-          <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--green);">2002</div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">Timor Leste resmi merdeka</div>
+      <div class="modal-body">
+        <h3>Website Pakai.in</h3>
+        <p>Website pakai.in adalah project kelompok yang dibuat untuk memenuhi kebutuhan tugas UI/UX website statis. Tujuan saya membuat web ini yaitu untuk mempermudah pengguna mencari informasi fashion dan brand yang terkenal.</p>
+        <div class="modal-web-actions">
+          <a href="https://pakaiin.vercel.app/" target="_blank" class="modal-link">
+            <span>↗</span> Buka Website
+          </a>
+          <button class="modal-close-btn" onclick="closeModal('modal4')">Tutup</button>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- TIMELINE -->
-<section class="timeline-section" id="timeline">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">03 — Timeline</div>
-      <h2 class="section-title">Kronologi Peristiwa</h2>
-      <p class="section-desc">Dari invasi 1975 hingga kemerdekaan Timor Leste — perjalanan panjang 27 tahun.</p>
+<!-- Image Lightbox -->
+<div class="lightbox-bg" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt=""/>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="footer-content">
+    <p>Connect with me on social media</p>
+    <div class="social-links">
+      <a href="https://instagram.com/nrcdytihf" target="_blank" class="social-link" title="Instagram">
+        <span>📸</span>
+        <span class="social-text">Instagram</span>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&to=indrirochmandari11@gmail.com" target="_blank" class="social-link" title="Email">
+        <span>📧</span>
+        <span class="social-text">Email</span>
+      </a>
+      <a href="https://wa.me/6288806116605" target="_blank" class="social-link" title="WhatsApp">
+        <span>💬</span>
+        <span class="social-text">WhatsApp</span>
+      </a>
+      <a href="https://github.com" target="_blank" class="social-link" title="GitHub">
+        <span>💻</span>
+        <span class="social-text">GitHub</span>
+      </a>
     </div>
-    <div class="timeline fade-in">
-
-      <div class="tl-item left">
-        <div class="tl-dot navy"></div>
-        <div class="tl-content right" style="text-align:right;">
-          <div class="tl-date">1974–1975</div>
-          <div class="tl-title">Operasi Komodo — Persiapan Integrasi</div>
-          <div class="tl-desc">Indonesia menjalankan operasi intelijen dan propaganda untuk mempersiapkan integrasi Timor Timur sebelum Portugal resmi mundur dari koloninya.</div>
-          <span class="tl-tag tag-navy">Intelijen</span>
-          <button class="tl-foto-btn" onclick="openLightbox('operasikomodo-.jpg','Operasi Komodo 1974–1975 — Persiapan integrasi Timor Timur')">📷 Lihat Foto</button>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot navy"></div>
-        <div class="tl-content left-c">
-          <div class="tl-date">28 November 1975</div>
-          <div class="tl-title">Deklarasi Kemerdekaan Fretilin</div>
-          <div class="tl-desc">Fretilin memproklamasikan kemerdekaan Timor Timur secara sepihak setelah perang saudara singkat melawan UDT.</div>
-          <span class="tl-tag tag-navy">Politik</span>
-          <button class="tl-foto-btn" onclick="openLightbox('DeklarasiKemerdekaanFretilin.jpg','Deklarasi Kemerdekaan Fretilin, 28 November 1975')">📷 Lihat Foto</button>
-        </div>
-      </div>
-
-      <div class="tl-item left">
-        <div class="tl-dot"></div>
-        <div class="tl-content right" style="text-align:right;">
-          <div class="tl-date">7 Desember 1975</div>
-          <div class="tl-title">Operasi Seroja — Invasi Indonesia</div>
-          <div class="tl-desc">Militer Indonesia melakukan invasi ke Timor Timur atas perintah Soeharto untuk mencegah komunisme. Invasi ini mendapat lampu hijau diam-diam dari Amerika Serikat dan Australia.</div>
-          <span class="tl-tag tag-merah">Militer</span>
-          <button class="tl-foto-btn" onclick="openLightbox('operasiseroja.jpg','Operasi Seroja — Invasi Indonesia ke Timor Timur, 7 Desember 1975')">📷 Lihat Foto</button>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot navy"></div>
-        <div class="tl-content left-c">
-          <div class="tl-date">17 Juli 1976</div>
-          <div class="tl-title">Integrasi Resmi ke Indonesia</div>
-          <div class="tl-desc">UU No. 7 Tahun 1976 menjadikan Timor Timur provinsi ke-27 Indonesia — tidak diakui PBB maupun komunitas internasional.</div>
-          <span class="tl-tag tag-navy">Hukum</span>
-          <button class="tl-foto-btn" onclick="openLightbox('DeklarasiKemerdekaanFretilin.jpg','Integrasi resmi Timor Timur ke Indonesia, 17 Juli 1976')">📷 Lihat Foto</button>
-        </div>
-      </div>
-
-      <div class="tl-item left">
-        <div class="tl-dot"></div>
-        <div class="tl-content right" style="text-align:right;">
-          <div class="tl-date">12 November 1991</div>
-          <div class="tl-title">Insiden Santa Cruz / Dili Massacre</div>
-          <div class="tl-desc">Aparat Indonesia menembaki warga sipil di pemakaman Santa Cruz, Dili. Diperkirakan 250–270 orang tewas. Insiden ini terekam kamera wartawan asing dan menjadi sorotan keras dunia internasional terhadap Indonesia.</div>
-          <span class="tl-tag tag-merah">HAM</span>
-          <button class="tl-foto-btn" onclick="openLightbox('InsidenSantaCruz.png','Insiden Santa Cruz / Dili Massacre, 12 November 1991')">📷 Lihat Foto</button>
-        </div>
-      </div>
-
-      <div class="tl-item left">
-        <div class="tl-dot gold"></div>
-        <div class="tl-content right" style="text-align:right;">
-          <div class="tl-date">21 Mei 1998</div>
-          <div class="tl-title">Soeharto Mundur — Era Reformasi</div>
-          <div class="tl-desc">B.J. Habibie naik sebagai presiden dan mengambil pendekatan berbeda terhadap Timor Timur.</div>
-          <span class="tl-tag tag-gold">Reformasi</span>
-          <button class="tl-foto-btn" onclick="openLightbox('SoehartoMundur.jpg','Soeharto mengumumkan pengunduran diri, 21 Mei 1998')">📷 Lihat Foto</button>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot gold"></div>
-        <div class="tl-content left-c">
-          <div class="tl-date">27 Januari 1999</div>
-          <div class="tl-title">Habibie Umumkan Jajak Pendapat</div>
-          <div class="tl-desc">Keputusan mengejutkan: Indonesia mengizinkan referendum. Dikritik keras oleh militer dan politisi nasionalis.</div>
-          <span class="tl-tag tag-gold">Keputusan Bersejarah</span>
-        </div>
-      </div>
-
-      <div class="tl-item left">
-        <div class="tl-dot navy"></div>
-        <div class="tl-content right" style="text-align:right;">
-          <div class="tl-date">5 Mei 1999</div>
-          <div class="tl-title">Perjanjian New York</div>
-          <div class="tl-desc">Indonesia, Portugal, dan PBB menandatangani perjanjian pelaksanaan referendum yang diawasi UNAMET.</div>
-          <span class="tl-tag tag-navy">Diplomasi</span>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot" style="width:18px;height:18px;top:4px;background:var(--red);box-shadow:0 0 0 3px var(--red);"></div>
-        <div class="tl-content left-c" style="border:2px solid var(--red);background:var(--red-light);">
-          <div class="tl-date" style="color:var(--red-dark);">30 Agustus 1999</div>
-          <div class="tl-title" style="color:var(--red-dark);font-size:1rem;">⭐ HARI REFERENDUM</div>
-          <div class="tl-desc">446.953 warga Timor Timur (98,9%) memberikan suara. Situasi tegang tapi tertib di bawah pengawasan UNAMET.</div>
-          <span class="tl-tag tag-merah">Hari Bersejarah</span>
-          <button class="tl-foto-btn" onclick="openLightbox('harirefrendum.jpg','Hari Referendum 30 Agustus 1999 — Antrian pemilih di TPS')">📷 Lihat Foto</button>
-        </div>
-      </div>
-
-      <div class="tl-item left">
-        <div class="tl-dot"></div>
-        <div class="tl-content right" style="text-align:right;">
-          <div class="tl-date">4 September 1999</div>
-          <div class="tl-title">Pengumuman Hasil</div>
-          <div class="tl-desc">PBB mengumumkan resmi: 78,5% memilih merdeka. Kekerasan besar-besaran meletus dari milisi pro-integrasi.</div>
-          <span class="tl-tag tag-merah">Hasil</span>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot navy"></div>
-        <div class="tl-content left-c">
-          <div class="tl-date">20 September 1999</div>
-          <div class="tl-title">Pasukan INTERFET Tiba</div>
-          <div class="tl-desc">Pasukan multinasional PBB dipimpin Jenderal Peter Cosgrove (Australia) dari 22 negara memulihkan keamanan.</div>
-          <span class="tl-tag tag-navy">Intervensi Internasional</span>
-        </div>
-      </div>
-
-      <div class="tl-item left">
-        <div class="tl-dot gold"></div>
-        <div class="tl-content right" style="text-align:right;">
-          <div class="tl-date">25 Oktober 1999</div>
-          <div class="tl-title">Pembentukan UNTAET</div>
-          <div class="tl-desc">PBB membentuk administrasi transisi UNTAET untuk mempersiapkan Timor Timur menuju kemerdekaan penuh.</div>
-          <span class="tl-tag tag-gold">Transisi</span>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot" style="background:var(--green);box-shadow:0 0 0 2px var(--green);"></div>
-        <div class="tl-content left-c" style="border:1.5px solid var(--green);background:var(--green-light);">
-          <div class="tl-date" style="color:var(--green);">20 Mei 2002</div>
-          <div class="tl-title" style="color:var(--green);font-size:1rem;">🇹🇱 TIMOR LESTE MERDEKA</div>
-          <div class="tl-desc">Xanana Gusmão dilantik sebagai Presiden pertama. Negara merdeka pertama di abad ke-21.</div>
-          <span class="tl-tag tag-green">Kemerdekaan</span>
-          <button class="tl-foto-btn" onclick="openLightbox('TimorLesteMerdeka.jpg','Xanana Gusmão dilantik sebagai Presiden pertama Timor Leste, 20 Mei 2002')">📷 Lihat Foto</button>
-        </div>
-      </div>
-
-    </div>
+    <p class="footer-credit">© 2026 Indri Rochmandari. All rights reserved.</p>
   </div>
-</section>
-
-<!-- TOKOH -->
-<section class="tokoh-section" id="tokoh">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">04 — Tokoh Kunci</div>
-      <h2 class="section-title">Siapa Saja Pemainnya?</h2>
-      <p class="section-desc">Klik kartu untuk mengetahui peran masing-masing tokoh dalam peristiwa bersejarah ini.</p>
-    </div>
-    <div class="tokoh-grid fade-in">
-
-      <div class="tokoh-card" onclick="toggleTokoh(this)">
-        <div class="tokoh-avatar" style="background-image:url('BJHabiebie.jpg');background-size:cover;background-position:center top;"></div>
-        <div class="tokoh-name">B.J. Habibie</div>
-        <div class="tokoh-role">Presiden Indonesia 1998–1999</div>
-        <button class="tokoh-toggle">Lihat peran ▾</button>
-        <div class="tokoh-detail">Mengambil keputusan berani mengizinkan referendum — dikritik keras di dalam negeri namun dipuji komunitas internasional. Habibie menyebut keputusannya sebagai bentuk penghormatan HAM. Pertanggungjawabannya ditolak MPR Oktober 1999 sebagian karena isu Timor Timur.</div>
-      </div>
-
-      <div class="tokoh-card" onclick="toggleTokoh(this)">
-        <div class="tokoh-avatar" style="background-image:url('XananaGusmao.jpg');background-size:cover;background-position:center top;"></div>
-        <div class="tokoh-name">Xanana Gusmão</div>
-        <div class="tokoh-role">Pemimpin Perlawanan Timor Timur</div>
-        <button class="tokoh-toggle">Lihat peran ▾</button>
-        <div class="tokoh-detail">Pemimpin gerakan perlawanan Timor Timur melalui CNRM (Conselho Nacional da Resistência Maubere) dan kemudian CNRT. Ditangkap Indonesia pada 1992 dan dipenjara hingga 1999. Setelah referendum, dibebaskan dan menjadi Presiden pertama Timor Leste (2002–2007). Simbol utama perjuangan kemerdekaan Timor.</div>
-      </div>
-
-      <div class="tokoh-card" onclick="toggleTokoh(this)">
-        <div class="tokoh-avatar" style="background-image:url('Joseramoshorta.jpg');background-size:cover;background-position:center top;"></div>
-        <div class="tokoh-name">José Ramos-Horta</div>
-        <div class="tokoh-role">Juru Bicara Perlawanan</div>
-        <button class="tokoh-toggle">Lihat peran ▾</button>
-        <div class="tokoh-detail">Berjuang dari pengasingan sebagai juru bicara internasional perlawanan Timor Timur. Meraih Nobel Perdamaian 1996 bersama Uskup Belo. Kelak menjadi Presiden Timor Leste (2007–2012).</div>
-      </div>
-
-      <div class="tokoh-card" onclick="toggleTokoh(this)">
-        <div class="tokoh-avatar" style="background-image:url('USKUPBELO.jpeg');background-size:cover;background-position:center top;"></div>
-        <div class="tokoh-name">Uskup Carlos Belo</div>
-        <div class="tokoh-role">Pemimpin Gereja Katolik</div>
-        <button class="tokoh-toggle">Lihat peran ▾</button>
-        <div class="tokoh-detail">Vokal menyuarakan perlindungan HAM dan hak rakyat Timor Timur dari dalam wilayah. Meraih Nobel Perdamaian 1996 bersama Ramos-Horta atas perjuangan damai mereka.</div>
-      </div>
-
-      <div class="tokoh-card" onclick="toggleTokoh(this)">
-        <div class="tokoh-avatar" style="background-image:url('AliAlatas.jpg');background-size:cover;background-position:center top;"></div>
-        <div class="tokoh-name">Ali Alatas</div>
-        <div class="tokoh-role">Menteri Luar Negeri RI</div>
-        <button class="tokoh-toggle">Lihat peran ▾</button>
-        <div class="tokoh-detail">Diplomat ulung yang bernegosiasi dengan PBB dan Portugal dalam merancang mekanisme pelaksanaan referendum. Mewakili Indonesia di forum internasional selama proses berlangsung.</div>
-      </div>
-
-      <div class="tokoh-card" onclick="toggleTokoh(this)">
-        <div class="tokoh-avatar" style="background-image:url('JendPeterCosgrove.jpg');background-size:cover;background-position:center -50px;"></div>
-        <div class="tokoh-name">Jend. Peter Cosgrove</div>
-        <div class="tokoh-role">Komandan INTERFET</div>
-        <button class="tokoh-toggle">Lihat peran ▾</button>
-        <div class="tokoh-detail">Jenderal Australia yang memimpin pasukan multinasional INTERFET beranggotakan 22 negara. Berhasil memulihkan keamanan di Timor Timur setelah kekerasan pasca referendum yang masif.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- DAMPAK -->
-<section class="dampak-section" id="dampak">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">05 — Dampak</div>
-      <h2 class="section-title">Apa Konsekuensinya?</h2>
-      <p class="section-desc">Referendum ini berdampak besar — bagi Timor Leste, Indonesia, dan dunia internasional.</p>
-    </div>
-    <div class="fade-in">
-      <div class="dampak-tabs">
-        <button class="dampak-tab active" onclick="switchTab('timorleste', this)">🇹🇱 Timor Leste</button>
-        <button class="dampak-tab" onclick="switchTab('indonesia', this)">🇮🇩 Indonesia</button>
-        <button class="dampak-tab" onclick="switchTab('dunia', this)">🌍 Dunia Internasional</button>
-      </div>
-
-      <div class="dampak-content active" id="tab-timorleste">
-        <div class="dampak-item pos">
-          <h4>Negara Baru yang Merdeka</h4>
-          <p>Lahirnya Timor Leste sebagai negara berdaulat pada 20 Mei 2002 — negara merdeka pertama di abad ke-21.</p>
-        </div>
-        <div class="dampak-item pos">
-          <h4>Anggota PBB</h4>
-          <p>Timor Leste resmi menjadi anggota PBB pada September 2002 dan diakui oleh komunitas internasional.</p>
-        </div>
-        <div class="dampak-item">
-          <h4>Rekonstruksi dari Nol</h4>
-          <p>Proses membangun negara dari awal dengan bantuan PBB. Awalnya menjadi negara termuda dan termiskin di Asia Tenggara.</p>
-        </div>
-        <div class="dampak-item">
-          <h4>Trauma Pasca Kekerasan</h4>
-          <p>250.000+ orang mengungsi. Infrastruktur hancur. Butuh bertahun-tahun untuk pulih dari kekerasan pasca referendum.</p>
-        </div>
-      </div>
-
-      <div class="dampak-content" id="tab-indonesia">
-        <div class="dampak-item">
-          <h4>Kehilangan Provinsi ke-27</h4>
-          <p>Indonesia kehilangan wilayah seluas 14.874 km² yang telah menjadi bagian NKRI selama 24 tahun.</p>
-        </div>
-        <div class="dampak-item">
-          <h4>Efek Domino Daerah Konflik</h4>
-          <p>Memunculkan kekhawatiran bahwa Papua dan Aceh akan mengikuti jejak Timor Timur menuntut kemerdekaan.</p>
-        </div>
-        <div class="dampak-item">
-          <h4>Ketegangan RI–Australia</h4>
-          <p>Hubungan sempat memanas akibat peran dominan Australia dalam pasukan INTERFET dan sikap pro-kemerdekaan.</p>
-        </div>
-        <div class="dampak-item pos">
-          <h4>Reformasi TNI</h4>
-          <p>Mendorong reformasi lebih lanjut di tubuh militer Indonesia dan pemisahan Polri dari TNI.</p>
-        </div>
-        <div class="dampak-item">
-          <h4>Habibie Kalah di MPR</h4>
-          <p>Pertanggungjawaban Habibie ditolak MPR Oktober 1999, sebagian besar karena keputusan mengizinkan referendum.</p>
-        </div>
-        <div class="dampak-item pos">
-          <h4>Pelajaran Demokrasi</h4>
-          <p>Menjadi contoh penyelesaian konflik secara demokratis dan menghormati hak asasi manusia.</p>
-        </div>
-      </div>
-
-      <div class="dampak-content" id="tab-dunia">
-        <div class="dampak-item pos">
-          <h4>Preseden Hak Penentuan Nasib Sendiri</h4>
-          <p>Menjadi preseden penting dalam hak <em>self-determination</em> suatu bangsa dalam hukum internasional.</p>
-        </div>
-        <div class="dampak-item pos">
-          <h4>Keberhasilan PBB</h4>
-          <p>Membuktikan PBB mampu menyelenggarakan referendum demokratis di wilayah konflik aktif.</p>
-        </div>
-        <div class="dampak-item pos">
-          <h4>Model Penyelesaian Konflik</h4>
-          <p>Mendorong penyelesaian damai berbagai konflik serupa di berbagai belahan dunia.</p>
-        </div>
-        <div class="dampak-item pos">
-          <h4>Negara Abad ke-21 Pertama</h4>
-          <p>Timor Leste menjadi simbol dan inspirasi perjuangan demokratis bagi bangsa-bangsa yang berjuang untuk merdeka.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- KUIS -->
-<section class="kuis-section" id="kuis">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">06 — Uji Pemahaman</div>
-      <h2 class="section-title">Kuis: Seberapa Paham Kamu?</h2>
-      <p class="section-desc">Jawab 7 pertanyaan tentang Referendum Timor Timur. Cek seberapa dalam pemahamanmu!</p>
-    </div>
-    <div class="kuis-card fade-in">
-      <div id="kuisContainer">
-        <div class="kuis-progress-bar">
-          <div class="kuis-progress-fill" id="progressFill" style="width:14.3%;"></div>
-        </div>
-        <div class="kuis-meta" id="kuisMeta">Soal 1 dari 7</div>
-        <div class="kuis-question" id="kuisQuestion"></div>
-        <div class="kuis-options" id="kuisOptions"></div>
-        <div class="kuis-feedback" id="kuisFeedback"></div>
-        <div class="kuis-nav">
-          <span style="font-size:0.82rem;color:var(--text-muted);" id="scoreMini">Skor: 0</span>
-          <button class="btn-kuis btn-primary" id="nextBtn" onclick="nextQuestion()" style="display:none;">Lanjut →</button>
-        </div>
-      </div>
-      <div class="kuis-score-card" id="scoreCard">
-        <div class="score-circle" id="scoreCircle">0/7</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);margin-bottom:0.5rem;" id="scoreTitle">Selesai!</h3>
-        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;" id="scoreDesc"></p>
-        <button class="btn-kuis btn-primary" onclick="resetKuis()">Ulangi Kuis</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TIM KAMI -->
-<section class="tim-section" id="tim">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">08 — Pembuat</div>
-      <h2 class="section-title">Tim Kami</h2>
-      <p class="section-desc">Website ini dibuat oleh Kelompok 3 — XI SIJA 1, SMK Negeri 7 Semarang.</p>
-    </div>
-    <div class="tim-grid fade-in">
-
-      <div class="tim-card">
-        <div class="tim-avatar">
-          <img src="Alicia.jpeg" alt="Alicia Jessica Mirabel Gan">
-        </div>
-        <div class="tim-nomor">03</div>
-        <div class="tim-nama">Alicia Jessica Mirabel Gan</div>
-        <div class="tim-kelas">XI SIJA 1</div>
-      </div>
-
-      <div class="tim-card">
-        <div class="tim-avatar">
-          <img src="Ayu.jpeg" alt="Ayu Rizdha Rahmadewi">
-        </div>
-        <div class="tim-nomor">08</div>
-        <div class="tim-nama">Ayu Rizdha Rahmadewi</div>
-        <div class="tim-kelas">XI SIJA 1</div>
-      </div>
-
-      <div class="tim-card">
-        <div class="tim-avatar">
-          <img src="indri.png" alt="Indri Rochmandari">
-        </div>
-        <div class="tim-nomor">18</div>
-        <div class="tim-nama">Indri Rochmandari</div>
-        <div class="tim-kelas">XI SIJA 1</div>
-      </div>
-
-    </div>
-    <div class="tim-sekolah fade-in">
-      <span class="tim-sekolah-icon">🏫</span>
-      <div>
-        <div class="tim-sekolah-nama">SMK Negeri 7 Semarang</div>
-        <div class="tim-sekolah-sub">Kelompok 3 &nbsp;•&nbsp; Mata Pelajaran Sejarah &nbsp;•&nbsp; Tahun Ajaran 2025/2026</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SUMBER -->
-<section class="sumber-section">
-  <div class="container">
-    <div class="section-label">07 — Referensi</div>
-    <h2 class="section-title">Sumber & Referensi</h2>
-    <p class="section-desc">Materi ini disusun berdasarkan berbagai sumber terpercaya.</p>
-    <div class="sumber-grid">
-      <div class="sumber-card">
-        <div class="sumber-card-label">Dokumen Resmi</div>
-        <ul>
-          <li><a href="https://peacekeeping.un.org/en/mission/past/etimor/etimor.htm" target="_blank" rel="noopener">Laporan resmi UNAMET/PBB — Referendum 1999</a></li>
-          <li><a href="https://peacemaker.un.org/timorleste-agreementmay99" target="_blank" rel="noopener">Perjanjian 5 Mei 1999 (Indonesia–Portugal–PBB)</a></li>
-          <li><a href="https://peraturan.bpk.go.id/Details/46923/uu-no-7-tahun-1976" target="_blank" rel="noopener">UU No. 7 Tahun 1976 tentang Integrasi Timor Timur</a></li>
-        </ul>
-      </div>
-      <div class="sumber-card">
-        <div class="sumber-card-label">Berita & Arsip</div>
-        <ul>
-          <li><a href="https://www.kompas.id/tag/timor-timur" target="_blank" rel="noopener">Arsip Kompas — Timor Timur</a></li>
-          <li><a href="https://majalah.tempo.co/topik/timor-timur" target="_blank" rel="noopener">Arsip Majalah Tempo — Timor Timur</a></li>
-          <li><a href="https://www.bbc.com/indonesia/articles/c3g1zg9lg2go" target="_blank" rel="noopener">BBC News — East Timor 1999</a></li>
-        </ul>
-      </div>
-      <div class="sumber-card">
-        <div class="sumber-card-label">Akademik & Resmi</div>
-        <ul>
-          <li><a href="https://www.komnasham.go.id/index.php/publikasi" target="_blank" rel="noopener">Komnas HAM — Laporan HAM Timor Timur</a></li>
-          <li><a href="https://www.cavr-timorleste.org/en/chegaReport.htm" target="_blank" rel="noopener">CAVR — Laporan Chega! (2005)</a></li>
-          <li><a href="https://www.kemdikbud.go.id" target="_blank" rel="noopener">kemdikbud.go.id — Materi Sejarah Indonesia</a></li>
-          <li><a href="https://www.pnri.go.id" target="_blank" rel="noopener">Perpustakaan Nasional RI (pnri.go.id)</a></li>
-        </ul>
-      </div>
-      <div class="sumber-card">
-        <div class="sumber-card-label">Ensiklopedia</div>
-        <ul>
-          <li><a href="https://id.wikipedia.org/wiki/Referendum_Timor_Timur_1999" target="_blank" rel="noopener">Wikipedia Indonesia — Referendum Timor Timur</a></li>
-          <li><a href="https://www.britannica.com/place/East-Timor/Independence" target="_blank" rel="noopener">Britannica.com — East Timor Independence</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div style="margin-bottom:0.4rem;"></div>Dibuat untuk tugas sejarah Era Reformasi — <span>Referendum Timor Timur 1999</span></div>
-  <div style="font-size:0.72rem;opacity:0.5;">Kelompok 3 &nbsp;•&nbsp; Materi: Sejarah Indonesia Kelas XII &nbsp;•&nbsp; Data bersumber dari UNAMET/PBB, Komnas HAM, dan CAVR</div>
 </footer>
 
-<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">↑</button>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox(event)">
-  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="lightbox-img" src="" alt="">
-  <div id="lightbox-caption"></div>
-</div>
-
-<script>
-// === CHARTS ===
-const donut = new Chart(document.getElementById('donutChart'), {
-  type: 'doughnut',
-  data: {
-    labels: ['Merdeka', 'Otonomi'],
-    datasets: [{
-      data: [78.5, 21.5],
-      backgroundColor: ['#C0392B', '#2C3E6B'],
-      borderWidth: 3,
-      borderColor: '#FFFFFF'
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: { label: ctx => ctx.label + ': ' + ctx.parsed + '%' }
-      }
-    },
-    cutout: '65%'
-  }
-});
-
-const bar = new Chart(document.getElementById('barChart'), {
-  type: 'bar',
-  data: {
-    labels: ['Terdaftar', 'Memilih', 'Pilih Merdeka', 'Pilih Otonomi'],
-    datasets: [{
-      data: [451792, 446953, 344580, 94388],
-      backgroundColor: ['#2C3E6B','#1A2744','#C0392B','#7F8C8D'],
-      borderRadius: 6,
-      borderWidth: 0
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
-    scales: {
-      y: {
-        ticks: {
-          callback: v => (v/1000).toFixed(0) + 'K',
-          font: { size: 11 }
-        },
-        grid: { color: 'rgba(0,0,0,0.05)' }
-      },
-      x: {
-        ticks: { font: { size: 10 }, autoSkip: false, maxRotation: 15 },
-        grid: { display: false }
-      }
-    }
-  }
-});
-
-// === VOTE BARS ANIMATION ===
-function animateBars() {
-  const card = document.getElementById('voteCard');
-  const rect = card.getBoundingClientRect();
-  if (rect.top < window.innerHeight - 100) {
-    document.getElementById('barMerdeka').style.width = '78.5%';
-    document.getElementById('barOtonomi').style.width = '21.5%';
-    window.removeEventListener('scroll', animateBars);
-  }
-}
-window.addEventListener('scroll', animateBars);
-setTimeout(animateBars, 500);
-
-// === TOKOH TOGGLE ===
-function toggleTokoh(card) {
-  const detail = card.querySelector('.tokoh-detail');
-  const btn = card.querySelector('.tokoh-toggle');
-  detail.classList.toggle('open');
-  btn.textContent = detail.classList.contains('open') ? 'Tutup ▴' : 'Lihat peran ▾';
-}
-
-// === DAMPAK TABS ===
-function switchTab(tabId, btn) {
-  document.querySelectorAll('.dampak-content').forEach(c => c.classList.remove('active'));
-  document.querySelectorAll('.dampak-tab').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + tabId).classList.add('active');
-  btn.classList.add('active');
-}
-
-// === KUIS ===
-const questions = [
-  {
-    q: 'Pada tanggal berapa referendum Timor Timur dilaksanakan?',
-    opts: ['17 Juli 1999', '30 Agustus 1999', '4 September 1999', '20 Mei 1999'],
-    ans: 1,
-    explain: 'Referendum dilaksanakan pada 30 Agustus 1999 di bawah pengawasan UNAMET/PBB.'
-  },
-  {
-    q: 'Berapa persen rakyat Timor Timur yang memilih kemerdekaan?',
-    opts: ['65,3%', '71,2%', '78,5%', '85,7%'],
-    ans: 2,
-    explain: '78,5% atau 344.580 suara memilih merdeka dari total 446.953 suara yang masuk.'
-  },
-  {
-    q: 'Siapakah presiden Indonesia yang mengizinkan referendum Timor Timur?',
-    opts: ['Soeharto', 'Megawati Sukarnoputri', 'Abdurrahman Wahid', 'B.J. Habibie'],
-    ans: 3,
-    explain: 'B.J. Habibie mengumumkan keputusan mengizinkan referendum pada 27 Januari 1999 — mengejutkan semua pihak.'
-  },
-  {
-    q: 'Apa nama pasukan internasional PBB yang dikirim setelah kekerasan pasca referendum?',
-    opts: ['UNTAET', 'UNAMET', 'INTERFET', 'UNIFIL'],
-    ans: 2,
-    explain: 'INTERFET (International Force East Timor) dipimpin Jenderal Peter Cosgrove dari Australia, beranggotakan 22 negara.'
-  },
-  {
-    q: 'Kapan Timor Leste secara resmi merdeka?',
-    opts: ['4 September 1999', '25 Oktober 1999', '20 Mei 2002', '12 November 2001'],
-    ans: 2,
-    explain: 'Timor Leste resmi merdeka pada 20 Mei 2002 dengan Xanana Gusmão sebagai presiden pertama.'
-  },
-  {
-    q: 'Siapa yang meraih Nobel Perdamaian 1996 atas perjuangan damai Timor Timur?',
-    opts: ['Xanana Gusmão & Ali Alatas', 'Ramos-Horta & Uskup Belo', 'Habibie & Fretilin', 'Soeharto & PBB'],
-    ans: 1,
-    explain: 'José Ramos-Horta dan Uskup Carlos Filipe Ximenes Belo meraih Nobel Perdamaian 1996.'
-  },
-  {
-    q: 'Apa nama operasi militer Indonesia saat menginvasi Timor Timur tahun 1975?',
-    opts: ['Operasi Trikora', 'Operasi Seroja', 'Operasi Dwikora', 'Operasi Komodo'],
-    ans: 1,
-    explain: 'Operasi Seroja adalah nama sandi invasi militer Indonesia ke Timor Timur pada 7 Desember 1975.'
-  }
-];
-
-let current = 0, score = 0, answered = false;
-
-function renderQuestion() {
-  const q = questions[current];
-  document.getElementById('kuisMeta').textContent = `Soal ${current+1} dari ${questions.length}`;
-  document.getElementById('progressFill').style.width = ((current+1)/questions.length*100).toFixed(1)+'%';
-  document.getElementById('kuisQuestion').textContent = q.q;
-  document.getElementById('kuisFeedback').className = 'kuis-feedback';
-  document.getElementById('kuisFeedback').textContent = '';
-  document.getElementById('nextBtn').style.display = 'none';
-  answered = false;
-
-  const opts = document.getElementById('kuisOptions');
-  opts.innerHTML = '';
-  q.opts.forEach((opt, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'kuis-option';
-    btn.textContent = opt;
-    btn.onclick = () => selectAnswer(i, btn);
-    opts.appendChild(btn);
-  });
-}
-
-function selectAnswer(idx, btn) {
-  if (answered) return;
-  answered = true;
-  const q = questions[current];
-  const allOpts = document.querySelectorAll('.kuis-option');
-  allOpts.forEach(b => b.disabled = true);
-  const fb = document.getElementById('kuisFeedback');
-
-  if (idx === q.ans) {
-    btn.classList.add('correct');
-    score++;
-    fb.textContent = '✓ Benar! ' + q.explain;
-    fb.className = 'kuis-feedback correct show';
-  } else {
-    btn.classList.add('wrong');
-    allOpts[q.ans].classList.add('correct');
-    fb.textContent = '✗ Kurang tepat. ' + q.explain;
-    fb.className = 'kuis-feedback wrong show';
-  }
-
-  document.getElementById('scoreMini').textContent = 'Skor: ' + score;
-  document.getElementById('nextBtn').style.display = 'block';
-}
-
-function nextQuestion() {
-  current++;
-  if (current >= questions.length) {
-    showScore();
-  } else {
-    renderQuestion();
-  }
-}
-
-function showScore() {
-  document.getElementById('kuisContainer').style.display = 'none';
-  const card = document.getElementById('scoreCard');
-  card.classList.add('show');
-  document.getElementById('scoreCircle').textContent = score + '/' + questions.length;
-
-  let title, desc;
-  const pct = score / questions.length;
-  if (pct === 1) {
-    title = 'Sempurna! Historian Sejati! 🏆';
-    desc = 'Kamu menguasai semua materi Referendum Timor Timur dengan sangat baik!';
-    document.getElementById('scoreCircle').style.background = 'var(--green)';
-  } else if (pct >= 0.7) {
-    title = 'Bagus Sekali! 👏';
-    desc = 'Pemahamanmu sudah cukup kuat. Pelajari lagi bagian yang keliru ya!';
-    document.getElementById('scoreCircle').style.background = 'var(--navy)';
-  } else if (pct >= 0.4) {
-    title = 'Lumayan, Tapi Perlu Belajar Lagi 📚';
-    desc = 'Ada beberapa bagian yang perlu diulang. Baca lagi materinya dan coba lagi!';
-    document.getElementById('scoreCircle').style.background = '#C9A227';
-  } else {
-    title = 'Semangat Belajar! 💪';
-    desc = 'Jangan menyerah! Baca materi di atas dulu lalu coba lagi.';
-    document.getElementById('scoreCircle').style.background = 'var(--red)';
-  }
-  document.getElementById('scoreTitle').textContent = title;
-  document.getElementById('scoreDesc').textContent = desc;
-}
-
-function resetKuis() {
-  current = 0; score = 0; answered = false;
-  document.getElementById('scoreCard').classList.remove('show');
-  document.getElementById('kuisContainer').style.display = 'block';
-  document.getElementById('scoreMini').textContent = 'Skor: 0';
-  renderQuestion();
-}
-
-renderQuestion();
-
-// === SPARKLE CANVAS (FULL PAGE) ===
-(function() {
-  const canvas = document.getElementById('sparkleCanvas');
-  const ctx = canvas.getContext('2d');
-  let stars = [];
-  let W, H;
-
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  const SHAPES = ['✦', '✧', '⋆', '·'];
-  const COLORS = ['#D4AC0D', '#FFD700', '#ffffff', '#FFF8DC'];
-
-  function randomStar() {
-    return {
-      x: Math.random() * W,
-      y: Math.random() * H,
-      size: Math.random() * 16 + 8,
-      shape: SHAPES[Math.floor(Math.random() * SHAPES.length)],
-      color: COLORS[Math.floor(Math.random() * COLORS.length)],
-      alpha: 0,
-      alphaDir: 1,
-      alphaSpeed: Math.random() * 0.012 + 0.004,
-      maxAlpha: Math.random() * 0.6 + 0.4,
-      drift: (Math.random() - 0.5) * 0.2,
-      vy: -(Math.random() * 0.2 + 0.05),
-    };
-  }
-
-  for (let i = 0; i < 55; i++) {
-    const s = randomStar();
-    s.alpha = Math.random() * s.maxAlpha;
-    stars.push(s);
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    stars.forEach(s => {
-      ctx.save();
-      ctx.globalAlpha = s.alpha;
-      ctx.font = `${s.size}px serif`;
-      ctx.fillStyle = s.color;
-      ctx.shadowColor = s.color;
-      ctx.shadowBlur = 12;
-      ctx.fillText(s.shape, s.x, s.y);
-      ctx.restore();
-
-      s.alpha += s.alphaSpeed * s.alphaDir;
-      if (s.alpha >= s.maxAlpha) s.alphaDir = -1;
-      if (s.alpha <= 0) {
-        Object.assign(s, randomStar());
-        s.alpha = 0;
-        s.alphaDir = 1;
-      }
-      s.x += s.drift;
-      s.y += s.vy;
-      if (s.y < -20) s.y = H + 10;
-    });
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add('visible');
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-// === LIGHTBOX ===
-function openLightbox(src, caption) {
-  document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox-caption').textContent = caption;
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeLightbox(e) {
-  if (!e || e.target === document.getElementById('lightbox') || e.target === document.getElementById('lightbox-close')) {
-    document.getElementById('lightbox').classList.remove('open');
-    document.getElementById('lightbox-img').src = '';
-    document.body.style.overflow = '';
-  }
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox({target: document.getElementById('lightbox')}); });
-
-// === CUSTOM CURSOR ===
-(function() {
-  const dot  = document.getElementById('cursor-dot');
-  const ring = document.getElementById('cursor-ring');
-  let mouseX = 0, mouseY = 0;
-  let ringX  = 0, ringY  = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  });
-
-  // ring ngikut dengan lag (smooth)
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  // hover efek pada elemen interaktif
-  const hoverEls = document.querySelectorAll('a, button, .tokoh-card, .dampak-tab, .kuis-option, .hero-stat');
-  hoverEls.forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-  });
-})();
-
-// === SCROLL TO TOP ===
-const scrollTopBtn = document.getElementById('scrollTop');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 400) {
-    scrollTopBtn.classList.add('show');
-  } else {
-    scrollTopBtn.classList.remove('show');
-  }
-});
-
-// === ACTIVE NAV HIGHLIGHT ===
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-const navObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.id;
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-      });
-    }
-  });
-}, { threshold: 0, rootMargin: '-50% 0px -49% 0px' });
-sections.forEach(s => navObserver.observe(s));
-</script>
+<!-- ===== SCRIPTS ===== -->
+<script src="script.js"></script>
 </body>
 </html>
-
-
